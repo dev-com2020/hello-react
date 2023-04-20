@@ -3,7 +3,7 @@ import Product from "./Product";
 
 class ProductList extends React.Component {
   render() {
-    return () => {
+
       let products = [
         {
           code: "P01",
@@ -32,10 +32,9 @@ class ProductList extends React.Component {
       ];
       let productComponents = [];
       for (let product of products) {
-        productComponents.push(<Product />);
+        productComponents.push(<Product item={product} />);
       }
       return <ul>{productComponents}</ul>;
     };
   }
-}
 export default ProductList;
